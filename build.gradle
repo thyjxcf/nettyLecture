@@ -1,0 +1,24 @@
+//支持编写java项目 的插件
+plugins {
+    id 'java'
+}
+//
+group 'com.shengsiyuan'
+version '1.0'
+//源的编译级别是什么
+sourceCompatibility = 1.8
+//生成的class文件的编译级别
+targetCompatibility = 1.8
+
+//仓库 ，如果本地没有他去那里取，maven
+repositories {
+//    mavenCentral()
+    maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'}
+}
+//repositories { maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'} }
+//项目中的依赖
+dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile ("junit:junit:4.12")
+    implementation 'io.netty:netty-all:4.1.10.Final'
+}
